@@ -18,10 +18,7 @@
             font-family: Arial, sans-serif;
             color: white;
             overflow: hidden;
-            -webkit-user-select: none; /* 禁止用户选中文本 */
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+            
         }
 
         .video-container {
@@ -62,6 +59,10 @@
             left: 25%;
             z-index: 10;
             text-align: left;
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
         }
 
         .text-container h1 {
