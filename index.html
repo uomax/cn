@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="别找了，直接问！需要什么，我们帮你搞定！">
     <meta name="keywords" content="acexxx - 你提需求，我们来完成">
     <meta name="author" content="Acexxx">
+    <!-- Open Graph 标签（SEO 优化） -->
+    <meta property="og:title" content="acexxx - 你提需求，我们来完成">
+    <meta property="og:description" content="别找了，直接问！需要什么，我们帮你搞定！">
+    <meta property="og:image" content="https://www.acexxx.cc/logo.webp">
+    <meta property="og:url" content="https://www.acexxx.cc">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card 标签（SEO 优化） -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="acexxx - 你提需求，我们来完成">
+    <meta name="twitter:description" content="别找了，直接问！需要什么，我们帮你搞定！">
+    <meta name="twitter:image" content="https://www.acexxx.cc/logo.webp">
     <title>acexxx - 你提需求，我们来完成。</title>
+    <!-- 引入 Roboto 字体（CSS 优化） -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,7 +28,8 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            /* 使用 Roboto 字体并设置回退（CSS 优化） */
+            font-family: 'Roboto', Arial, sans-serif;
             color: white;
             overflow: hidden;
         }
@@ -62,6 +76,8 @@
             -moz-user-select: text;
             -ms-user-select: text;
             user-select: text;
+            /* 添加淡入动画（CSS 优化） */
+            animation: fadeIn 2s ease-in;
         }
 
         .text-container h1 {
@@ -81,6 +97,35 @@
             margin-top: 20px;
             font-size: 30px;
         }
+
+        /* 响应式设计（CSS 优化） */
+        @media (max-width: 768px) {
+            .logo {
+                width: 80px;
+                height: 40px;
+                top: 10px;
+                left: 10px;
+            }
+            .text-container {
+                left: 10%;
+                bottom: 5%;
+            }
+            .text-container h1 {
+                font-size: 18px;
+            }
+            .text-container p {
+                font-size: 24px;
+            }
+            .text-container p span {
+                font-size: 20px;
+            }
+        }
+
+        /* 淡入动画定义（CSS 优化） */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
     <script>
         document.addEventListener("contextmenu", function(event) {
@@ -90,7 +135,8 @@
 </head>
 <body>
     <div class="video-container">
-        <video autoplay muted loop playsinline>
+        <!-- 添加 aria-label（可访问性优化） -->
+        <video autoplay muted loop playsinline aria-label="背景展示视频">
             <source src="video.mp4" type="video/mp4">
             <source src="video.webm" type="video/webm">
             您的浏览器不支持 HTML5 视频标签。
@@ -100,7 +146,7 @@
             <h1>你 好，世 界 。</h1>
             <p>
                 <strong>别找了，直接问！需要什么，我们帮你搞定！</strong>
-                <span>QQ: 911716707&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Telegram: @acexxxcc </span>
+                <span>QQ: 911716707        Telegram: @acexxxcc </span>
             </p>
         </div>
     </div>
