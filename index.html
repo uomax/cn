@@ -27,19 +27,19 @@
         }
 
         .video-container {
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100vw;
             height: 100vh;
-            overflow: hidden;
         }
 
         video {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             pointer-events: none;
         }
@@ -91,6 +91,12 @@
     <script>
         document.addEventListener("contextmenu", function(event) {
             event.preventDefault(); 
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault();
+            }
         });
     </script>
 </head>
