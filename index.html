@@ -6,13 +6,7 @@
     <meta name="description" content="别找了，直接问！需要什么，我们帮你搞定！">
     <meta name="keywords" content="acexxx - 你提需求，我们来完成">
     <meta name="author" content="Acexxx">
-    <meta property="og:title" content="acexxx - 你提需求，我们来完成">
-    <meta property="og:description" content="别找了，直接问！需要什么，我们帮你搞定！">
-    <meta property="og:image" content="logo.webp">
-    <meta property="og:url" content="https://www.acexxx.cc">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; media-src 'self';">
     <title>acexxx - 你提需求，我们来完成。</title>
-    <link rel="icon" type="image/webp" sizes="32x32" href="logo.webp">
     <style>
         * {
             margin: 0;
@@ -27,19 +21,19 @@
         }
 
         .video-container {
-            position: fixed;
-            top: 0;
-            left: 0;
+            position: relative;
             width: 100vw;
             height: 100vh;
+            overflow: hidden;
         }
 
         video {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
             object-fit: cover;
             pointer-events: none;
         }
@@ -91,12 +85,6 @@
     <script>
         document.addEventListener("contextmenu", function(event) {
             event.preventDefault(); 
-        });
-
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
-                event.preventDefault();
-            }
         });
     </script>
 </head>
