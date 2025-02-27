@@ -86,16 +86,15 @@
         document.addEventListener("contextmenu", function(event) {
             event.preventDefault(); 
         });
-        
-        document.addEventListener("DOMContentLoaded", function() {
-            const videoElement = document.querySelector("video");
-            videoElement.src = "video.mp4";
-        });
     </script>
 </head>
 <body>
     <div class="video-container">
-        <video autoplay muted loop playsinline></video>
+        <video autoplay muted loop playsinline>
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+            您的浏览器不支持 HTML5 视频标签。
+        </video>
         <div class="logo"></div>
         <div class="text-container">
             <h1>你 好，世 界 。</h1>
