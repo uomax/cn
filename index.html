@@ -6,20 +6,22 @@
     <meta name="description" content="别找了，直接问！需要什么，我们帮你搞定！">
     <meta name="keywords" content="acexxx - 你提需求，我们来完成">
     <meta name="author" content="Acexxx">
-    <!-- Open Graph 标签（SEO 优化） -->
+    
     <meta property="og:title" content="acexxx - 你提需求，我们来完成">
     <meta property="og:description" content="别找了，直接问！需要什么，我们帮你搞定！">
     <meta property="og:image" content="https://yourdomain.com/logo.webp">
     <meta property="og:url" content="https://yourdomain.com">
     <meta property="og:type" content="website">
-    <!-- Twitter Card 标签（SEO 优化） -->
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="acexxx - 你提需求，我们来完成">
     <meta name="twitter:description" content="别找了，直接问！需要什么，我们帮你搞定！">
     <meta name="twitter:image" content="https://yourdomain.com/logo.webp">
     <title>acexxx - 你提需求，我们来完成。</title>
-    <!-- 引入 Roboto 字体（CSS 优化） -->
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/webp" href="logo.webp">
     <style>
         * {
             margin: 0;
@@ -136,10 +138,8 @@
 </head>
 <body>
     <div class="video-container">
-        <!-- 视频标签留空，动态加载 -->
         <video autoplay muted loop playsinline aria-label="背景展示视频" id="background-video"></video>
         <div class="overlay"></div>
-        <!-- Logo 动态加载 -->
         <div class="logo" id="logo-element"></div>
         <div class="text-container">
             <h1>你 好，世 界 。</h1>
@@ -151,25 +151,21 @@
     </div>
 
     <script>
-        // 禁用右键
         document.addEventListener("contextmenu", function(event) {
             event.preventDefault();
         });
 
-        // 简单的 Base64 编码混淆（仅示例，实际可替换为服务器端加密）
         const resources = {
-            videoMp4: "data:video/mp4;base64," + btoa("video.mp4"), // 实际应为 Base64 编码的视频数据
+            videoMp4: "data:video/mp4;base64," + btoa("video.mp4"),
             videoWebm: "data:video/webm;base64," + btoa("video.webm"),
             logo: "data:image/webp;base64," + btoa("logo.webp")
         };
 
-        // 动态加载视频资源
         const video = document.getElementById("background-video");
         const mp4Source = document.createElement("source");
         const webmSource = document.createElement("source");
 
-        // 使用混淆后的路径（实际应由服务器生成）
-        mp4Source.src = atob(resources.videoMp4.split(",")[1]); // 解码为原始路径
+        mp4Source.src = atob(resources.videoMp4.split(",")[1]);
         mp4Source.type = "video/mp4";
         webmSource.src = atob(resources.videoWebm.split(",")[1]);
         webmSource.type = "video/webm";
@@ -178,9 +174,8 @@
         video.appendChild(webmSource);
         video.load();
 
-        // 动态加载 Logo
         const logo = document.getElementById("logo-element");
-        logo.style.backgroundImage = `url(${atob(resources.logo.split(",")[1])})`; // 解码为原始路径
+        logo.style.backgroundImage = `url(${atob(resources.logo.split(",")[1])})`;
     </script>
 </body>
 </html>
